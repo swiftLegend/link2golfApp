@@ -1,0 +1,6 @@
+framework module Pods_link2golfApp {
+  umbrella header "Pods-link2golfApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

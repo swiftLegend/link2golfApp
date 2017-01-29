@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="link2golfApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Link2GolfLogo-no-tagline-small" translatesAutoresizingMaskIntoConstraints="NO" id="X8f-Hc-K3c" userLabel="link2golf logo">
+                                <rect key="frame" x="37" y="71" width="301" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="dJb-fE-MU2"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password " textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="FHY-0q-Rc4">
+                                <rect key="frame" x="16" y="353" width="343" height="48"/>
+                                <color key="backgroundColor" red="0.98939323430000004" green="0.98997318739999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address " textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M9k-ia-kYA">
+                                <rect key="frame" x="16" y="321.5" width="343" height="24"/>
+                                <color key="backgroundColor" red="0.98939323430000004" green="0.98997318739999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEp-Ul-pmE">
+                                <rect key="frame" x="16" y="417" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.059394955639999997" green="0.44965559240000003" blue="0.177807942" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="E5d-Oo-1JJ"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up ">
+                                    <color key="titleColor" red="0.98939323430000004" green="0.98997318739999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="accountCreated:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XCP-pe-vY2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdz-qP-2po">
+                                <rect key="frame" x="16" y="482" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Qn5-0e-dH5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="M9k-ia-kYA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="145-Zg-Sgu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M9k-ia-kYA" secondAttribute="trailing" id="3b0-iz-j0R"/>
+                            <constraint firstItem="X8f-Hc-K3c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="E9g-rB-9Se"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FHY-0q-Rc4" secondAttribute="trailing" id="FfF-1A-iFL"/>
+                            <constraint firstItem="X8f-Hc-K3c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="51" id="HST-3D-F8Y"/>
+                            <constraint firstItem="hdz-qP-2po" firstAttribute="top" secondItem="aEp-Ul-pmE" secondAttribute="bottom" constant="15" id="HgW-SY-yjW"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="M9k-ia-kYA" secondAttribute="leading" id="IGk-SK-ycR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X8f-Hc-K3c" secondAttribute="trailing" constant="21" id="JFp-gf-jY9"/>
+                            <constraint firstItem="aEp-Ul-pmE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SL0-En-MCC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hdz-qP-2po" secondAttribute="bottom" constant="155" id="SMl-Jn-HaF"/>
+                            <constraint firstItem="FHY-0q-Rc4" firstAttribute="top" secondItem="M9k-ia-kYA" secondAttribute="bottom" constant="7.5" id="TfJ-7i-XqJ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="FHY-0q-Rc4" secondAttribute="leading" id="btI-7b-HA8"/>
+                            <constraint firstItem="aEp-Ul-pmE" firstAttribute="top" secondItem="FHY-0q-Rc4" secondAttribute="bottom" constant="16" id="byA-W2-z4k"/>
+                            <constraint firstItem="hdz-qP-2po" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="erW-v3-IsR"/>
+                            <constraint firstItem="aEp-Ul-pmE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gcn-lD-ETY"/>
+                            <constraint firstItem="M9k-ia-kYA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mX9-ur-9Ym"/>
+                            <constraint firstItem="hdz-qP-2po" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qtw-qh-j14"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailLoginField" destination="M9k-ia-kYA" id="iIs-vS-K8d"/>
+                        <outlet property="passwordField" destination="FHY-0q-Rc4" id="xYn-tp-zMF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-268" y="235.23238380809596"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Link2GolfLogo-no-tagline-small" width="320" height="95"/>
+    </resources>
 </document>
